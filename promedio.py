@@ -1,7 +1,7 @@
 def pedir_cantidad_de_notas():
     while True:
         try:
-            cantidad = int(input("Ingresa la cantidad de notas"))
+            cantidad = int(input("Ingresa la cantidad de notas: "))
             if cantidad >= 2:
                 break
             else:
