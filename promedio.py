@@ -1,7 +1,21 @@
+def pedir_cantidad_de_notas():
+    while True:
+        try:
+            cantidad = int(input("Ingresa la cantidad de notas"))
+            if cantidad >= 2:
+                break
+            else:
+                print("Debes ingresar al menos 2 notas.")
+        except:
+            print("Valor invalido. Solo puedes ingresar numeros.")
+    return cantidad
+
+cantidad = pedir_cantidad_de_notas()
+
 def pedir_notas():
     contador = 0
     lista_notas = []
-    while contador < 5:
+    while contador < cantidad:
         try:
             nota = float(input(f"Ingresa tu nota N°{contador+1}: "))
             if nota >= 1 and nota <= 7:
